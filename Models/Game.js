@@ -1,5 +1,7 @@
+// import
 const mongoose = require('mongoose');
 
+// schemas
 const PlayerSchmea = new mongoose.Schema({
     currentWordIndex : { // keeps track of what word user is on
         type: Number,
@@ -16,6 +18,8 @@ const GameSchema = new mongoose.Schema({
     isOpen: {type: Boolean, default: true}, // if the party is open
     isOver: {type: Boolean, default: false}, // determine if game is over
     players: [PlayerSchema],
-    startTime: {type: Number}
-
+    startTime: {type: Number} // need this variable to calculate WPM
 })
+
+// exports
+mosule.exports = mongoose.model('Game', GameSchema)
