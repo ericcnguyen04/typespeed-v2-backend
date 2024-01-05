@@ -7,6 +7,9 @@ const mongoose = require('mongoose')
 const expressServer = app.listen(3001);
 const io = socketio(expressServer);
 
+// requiring schema
+const Game = require('./Models/Game');
+
 mongoose.connect('mongodb://localhost:27017/typeracer-backend') 
                 .then(() => {
                     console.log('sucessfully connected')
