@@ -4,7 +4,9 @@ import history from './history'
 
 function App() {
   return (
-    
+    <Router history={history}>
+      
+    </Router>
   );
 }
 
