@@ -6,7 +6,7 @@ function App() {
   return (
     <Router history={history}>
       <Switch>
-        
+        <Route exact path="/" component={GameMenu}/>
       </Switch>
     </Router>
   );
